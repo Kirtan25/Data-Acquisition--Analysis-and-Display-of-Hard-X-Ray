@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9E31FCE7-CD6F-430A-9F39-92F3F56B4DC9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KClient</RootNamespace>
+    <AssemblyName>KClient</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NetworksApi">
+      <HintPath>..\..\..\..\NetworksApi.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EnergyCount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EnergyCount.Designer.cs">
+      <DependentUpon>EnergyCount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TimeCount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TimeCount.Designer.cs">
+      <DependentUpon>TimeCount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TimeEnergy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TimeEnergy.Designer.cs">
+      <DependentUpon>TimeEnergy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NetworkSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NetworkSettings.Designer.cs">
+      <DependentUpon>NetworkSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Channel1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Channel1.Designer.cs">
+      <DependentUpon>Channel1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Channel2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Channel2.Designer.cs">
+      <DependentUpon>Channel2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Channel3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Channel3.Designer.cs">
+      <DependentUpon>Channel3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="EnergyCount.resx">
+      <DependentUpon>EnergyCount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TimeCount.resx">
+      <DependentUpon>TimeCount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TimeEnergy.resx">
+      <DependentUpon>TimeEnergy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetworkSettings.resx">
+      <DependentUpon>NetworkSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Channel1.resx">
+      <DependentUpon>Channel1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Channel2.resx">
+      <DependentUpon>Channel2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Channel3.resx">
+      <DependentUpon>Channel3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
